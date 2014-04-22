@@ -209,7 +209,7 @@ namespace Roadkill.Core.Plugins
 						_settings = new Settings(Id, version);
 
 						// Allow derived classes to add custom setting values
-						OnInitializeSettings(_settings);
+						this.OnInitializeSettings(_settings);
 
 						// Update the repository
 						Repository.SaveTextPluginSettings(this);

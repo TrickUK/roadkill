@@ -49,7 +49,7 @@ var Roadkill;
                     return false;
                 });
                 $(".wysiwyg-picture").click(function (e) {
-                    Web.Dialogs.openImageChooserModal("<iframe src='" + ROADKILL_FILESELECTURL + "' id='filechooser-iframe'></iframe>");
+                    Roadkill.Web.Dialogs.openImageChooserModal("<iframe src='" + ROADKILL_FILESELECTURL + "' id='filechooser-iframe'></iframe>");
                     return false;
                 });
                 $(".wysiwyg-link").click(function (e) {
@@ -57,7 +57,7 @@ var Roadkill;
                     return false;
                 });
                 $(".wysiwyg-help").click(function (e) {
-                    Web.Dialogs.openMarkupHelpModal("<iframe src='" + ROADKILL_WIKIMARKUPHELP + "' id='help-iframe'></iframe>");
+                    Roadkill.Web.Dialogs.openMarkupHelpModal("<iframe src='" + ROADKILL_WIKIMARKUPHELP + "' id='help-iframe'></iframe>");
                     return false;
                 });
             };
@@ -72,6 +72,7 @@ var Roadkill;
                 if (range !== null) {
                     var editorText = $("#Content").val();
 
+                    // Put the caret in the middle of the style, if the current selection isn't the style being added
                     if (editorText.substr(range.start - length, length) !== styleCode && range.text.substr(0, length) !== styleCode) {
                         $("#Content").replaceSelection(styleCode + range.text + styleCode);
                         $("#Content").setSelection(range.end + length, range.end + length);
@@ -139,10 +140,10 @@ var Roadkill;
                 return new Array(count + 1).join(text);
             };
 
-            WysiwygEditor.addImage = /**
+            /**
             Adds an image tag to the current caret location.
             */
-            function (image) {
+            WysiwygEditor.addImage = function (image) {
                 var range = $("#Content").getSelection();
 
                 if (range !== null) {
@@ -160,9 +161,9 @@ var Roadkill;
 
                     $("#Content").replaceSelection(prefix + suffix);
                     $("#Content").setSelection(range.start + prefix.length, range.start + prefix.length);
-                    Web.Dialogs.closeImageChooserModal();
+                    Roadkill.Web.Dialogs.closeImageChooserModal();
 
-                    Web.EditPage.updatePreviewPane();
+                    Roadkill.Web.EditPage.updatePreviewPane();
                 }
             };
             return WysiwygEditor;
@@ -171,3 +172,4 @@ var Roadkill;
     })(Roadkill.Web || (Roadkill.Web = {}));
     var Web = Roadkill.Web;
 })(Roadkill || (Roadkill = {}));
+//# sourceMappingURL=wysiwygeditor.js.map

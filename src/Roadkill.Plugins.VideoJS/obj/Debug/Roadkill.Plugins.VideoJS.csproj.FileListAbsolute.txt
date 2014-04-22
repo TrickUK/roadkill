@@ -1,0 +1,7 @@
+C:\Users\Richard.BASETEK\Documents\Basetek Git\Roadkill2\src\Roadkill.Web\Plugins\VideoJS\video-js.min.css
+C:\Users\Richard.BASETEK\Documents\Basetek Git\Roadkill2\src\Roadkill.Web\Plugins\VideoJS\video.js
+C:\Users\Richard.BASETEK\Documents\Basetek Git\Roadkill2\src\Roadkill.Web\Plugins\VideoJS\Roadkill.Plugins.VideoJS.dll
+C:\Users\Richard.BASETEK\Documents\Basetek Git\Roadkill2\src\Roadkill.Web\Plugins\VideoJS\Roadkill.Plugins.VideoJS.pdb
+C:\Users\Richard.BASETEK\Documents\Basetek Git\Roadkill2\src\Roadkill.Plugins.VideoJS\obj\Debug\Roadkill.Plugins.VideoJS.csprojResolveAssemblyReference.cache
+C:\Users\Richard.BASETEK\Documents\Basetek Git\Roadkill2\src\Roadkill.Plugins.VideoJS\obj\Debug\Roadkill.Plugins.VideoJS.dll
+C:\Users\Richard.BASETEK\Documents\Basetek Git\Roadkill2\src\Roadkill.Plugins.VideoJS\obj\Debug\Roadkill.Plugins.VideoJS.pdb

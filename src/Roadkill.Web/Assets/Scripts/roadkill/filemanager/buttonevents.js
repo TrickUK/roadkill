@@ -5,8 +5,8 @@ var Roadkill;
         (function (FileManager) {
             var ButtonEvents = (function () {
                 function ButtonEvents() {
-                    this._htmlBuilder = new FileManager.HtmlBuilder();
-                    this._ajaxRequest = new FileManager.AjaxRequest();
+                    this._htmlBuilder = new Roadkill.Web.FileManager.HtmlBuilder();
+                    this._ajaxRequest = new Roadkill.Web.FileManager.AjaxRequest();
                 }
                 ButtonEvents.prototype.bind = function () {
                     var that = this;
@@ -23,12 +23,12 @@ var Roadkill;
                     var tr = $("tr.select");
                     var folder = tr.attr("data-urlpath");
 
-                    if (FileManager.Util.IsStringNullOrEmpty(folder)) {
+                    if (Roadkill.Web.FileManager.Util.IsStringNullOrEmpty(folder)) {
                         return;
                     }
 
-                    var confirmMessage = FileManager.Util.FormatString(ROADKILL_FILEMANAGER_DELETE_CONFIRM, folder);
-                    Web.Dialogs.confirm(confirmMessage, function (result) {
+                    var confirmMessage = Roadkill.Web.FileManager.Util.FormatString(ROADKILL_FILEMANAGER_DELETE_CONFIRM, folder);
+                    Roadkill.Web.Dialogs.confirm(confirmMessage, function (result) {
                         if (!result)
                             return;
 
@@ -38,12 +38,12 @@ var Roadkill;
                                 // Update the current folder's listing
                                 var li = $("ul.navigator li:last-child");
                                 var currentFolder = li.attr("data-urlpath");
-                                FileManager.TableEvents.update(currentFolder, false);
+                                Roadkill.Web.FileManager.TableEvents.update(currentFolder, false);
 
-                                var message = FileManager.Util.FormatString(ROADKILL_FILEMANAGER_DELETE_SUCCESS, folder);
+                                var message = Roadkill.Web.FileManager.Util.FormatString(ROADKILL_FILEMANAGER_DELETE_SUCCESS, folder);
                                 toastr.info(message);
                             } else {
-                                var errorMessage = FileManager.Util.FormatString(ROADKILL_FILEMANAGER_DELETE_ERROR, folder);
+                                var errorMessage = Roadkill.Web.FileManager.Util.FormatString(ROADKILL_FILEMANAGER_DELETE_ERROR, folder);
                                 toastr.error(errorMessage + " :<br/>" + data.message);
                             }
                         };
@@ -57,11 +57,11 @@ var Roadkill;
                     var tr = $("tr.select");
 
                     if (tr.length > 0 && tr.attr("data-itemtype") == "file") {
-                        var currentPath = FileManager.TableEvents.getCurrentPath();
+                        var currentPath = Roadkill.Web.FileManager.TableEvents.getCurrentPath();
                         var filename = $("td.file", tr).text();
 
-                        var message = FileManager.Util.FormatString(ROADKILL_FILEMANAGER_DELETE_CONFIRM, filename);
-                        Web.Dialogs.confirm(message, function (result) {
+                        var message = Roadkill.Web.FileManager.Util.FormatString(ROADKILL_FILEMANAGER_DELETE_CONFIRM, filename);
+                        Roadkill.Web.Dialogs.confirm(message, function (result) {
                             if (!result)
                                 return;
 
@@ -70,10 +70,10 @@ var Roadkill;
                                 if (data.status == "ok") {
                                     $(tr).remove();
 
-                                    var message = FileManager.Util.FormatString(ROADKILL_FILEMANAGER_DELETE_SUCCESS, filename);
+                                    var message = Roadkill.Web.FileManager.Util.FormatString(ROADKILL_FILEMANAGER_DELETE_SUCCESS, filename);
                                     toastr.info(message);
                                 } else {
-                                    var errorMessage = FileManager.Util.FormatString(ROADKILL_FILEMANAGER_DELETE_ERROR, filename);
+                                    var errorMessage = Roadkill.Web.FileManager.Util.FormatString(ROADKILL_FILEMANAGER_DELETE_ERROR, filename);
                                     toastr.error(errorMessage + " :<br/>" + data.message);
                                 }
                             };
@@ -124,14 +124,14 @@ var Roadkill;
                             }
 
                             var item = $("ul.navigator li:last-child");
-                            FileManager.TableEvents.update(item.attr("data-urlpath"));
+                            Roadkill.Web.FileManager.TableEvents.update(item.attr("data-urlpath"));
 
-                            FileManager.BreadCrumbTrail.removeLastItem();
+                            Roadkill.Web.FileManager.BreadCrumbTrail.removeLastItem();
 
                             $("tr#newfolderrow").remove();
                         };
 
-                        that._ajaxRequest.newFolder(FileManager.TableEvents.getCurrentPath(), newFolder, success);
+                        that._ajaxRequest.newFolder(Roadkill.Web.FileManager.TableEvents.getCurrentPath(), newFolder, success);
                     }
                 };
 
@@ -146,3 +146,4 @@ var Roadkill;
     })(Roadkill.Web || (Roadkill.Web = {}));
     var Web = Roadkill.Web;
 })(Roadkill || (Roadkill = {}));
+//# sourceMappingURL=buttonevents.js.map

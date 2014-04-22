@@ -56,9 +56,9 @@ var Roadkill;
                             toastr.error(data.message);
                         } else {
                             if (addBreadCrumb)
-                                FileManager.BreadCrumbTrail.addNewItem(data);
+                                Roadkill.Web.FileManager.BreadCrumbTrail.addNewItem(data);
 
-                            var htmlBuilder = new FileManager.HtmlBuilder();
+                            var htmlBuilder = new Roadkill.Web.FileManager.HtmlBuilder();
                             var tableHtml = htmlBuilder.getFolderTable(data);
                             $("#folder-container").html(tableHtml.join(""));
 
@@ -67,7 +67,7 @@ var Roadkill;
                         }
                     };
 
-                    var ajaxRequest = new FileManager.AjaxRequest();
+                    var ajaxRequest = new Roadkill.Web.FileManager.AjaxRequest();
                     ajaxRequest.getFolderInfo(path, success);
                 };
                 return TableEvents;
@@ -78,3 +78,4 @@ var Roadkill;
     })(Roadkill.Web || (Roadkill.Web = {}));
     var Web = Roadkill.Web;
 })(Roadkill || (Roadkill = {}));
+//# sourceMappingURL=tableevents.js.map

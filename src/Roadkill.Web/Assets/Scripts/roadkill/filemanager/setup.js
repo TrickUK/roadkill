@@ -13,13 +13,13 @@ var Roadkill;
                     this.initializeImagePreview();
                     this.initializeFileUpload();
 
-                    var buttonEvents = new FileManager.ButtonEvents();
+                    var buttonEvents = new Roadkill.Web.FileManager.ButtonEvents();
                     buttonEvents.bind();
 
-                    var tableEvents = new FileManager.TableEvents();
+                    var tableEvents = new Roadkill.Web.FileManager.TableEvents();
                     tableEvents.bind();
 
-                    FileManager.TableEvents.update("/");
+                    Roadkill.Web.FileManager.TableEvents.update("/");
                 };
 
                 Setup.initializeImagePreview = function () {
@@ -34,7 +34,7 @@ var Roadkill;
                             return;
 
                         var imgUrl;
-                        imgUrl = ROADKILL_ATTACHMENTSPATH + FileManager.TableEvents.getCurrentPath() + "/";
+                        imgUrl = ROADKILL_ATTACHMENTSPATH + Roadkill.Web.FileManager.TableEvents.getCurrentPath() + "/";
                         imgUrl = imgUrl.replace("//", "/") + $("td.file", this).text();
 
                         $("body").append("<p id='image-preview'><img src='" + imgUrl + "' alt='Image Preview' /></p>");
@@ -67,14 +67,14 @@ var Roadkill;
                             } else {
                                 toastr.success(data.result.filename + " uploaded successfully.");
 
-                                FileManager.TableEvents.update("", false);
+                                Roadkill.Web.FileManager.TableEvents.update("", false);
                                 setTimeout(function () {
                                     $("#progress div.bar").css("width", "0%");
                                 }, 2000);
                             }
                         }
                     }).bind("fileuploaddrop", function (e, data) {
-                        FileManager.TableEvents.update("", false);
+                        Roadkill.Web.FileManager.TableEvents.update("", false);
                     });
                 };
                 return Setup;
@@ -85,3 +85,4 @@ var Roadkill;
     })(Roadkill.Web || (Roadkill.Web = {}));
     var Web = Roadkill.Web;
 })(Roadkill || (Roadkill = {}));
+//# sourceMappingURL=setup.js.map

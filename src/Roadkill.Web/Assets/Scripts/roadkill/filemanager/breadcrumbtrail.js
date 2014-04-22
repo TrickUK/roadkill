@@ -12,7 +12,7 @@ var Roadkill;
 
                     if (level == 0)
                         $("ul.navigator li").remove();
-else
+                    else
                         $("ul.navigator li:gt(" + (level - 1) + ")").remove();
                 };
 
@@ -28,7 +28,7 @@ else
                 };
 
                 BreadCrumbTrail.addNewItem = function (data) {
-                    var htmlBuilder = new FileManager.HtmlBuilder();
+                    var htmlBuilder = new Roadkill.Web.FileManager.HtmlBuilder();
                     var count = $("ul.navigator li").length;
                     var breadCrumbHtml = htmlBuilder.getBreadCrumb(data, count);
 
@@ -36,7 +36,7 @@ else
                     $("li[data-urlpath='" + data.UrlPath + "'] a").on("click", function () {
                         var li = $(this).parent();
                         li.nextAll().remove();
-                        FileManager.TableEvents.update(li.attr("data-urlpath"), false);
+                        Roadkill.Web.FileManager.TableEvents.update(li.attr("data-urlpath"), false);
                     });
                 };
                 return BreadCrumbTrail;
@@ -47,3 +47,4 @@ else
     })(Roadkill.Web || (Roadkill.Web = {}));
     var Web = Roadkill.Web;
 })(Roadkill || (Roadkill = {}));
+//# sourceMappingURL=breadcrumbtrail.js.map
