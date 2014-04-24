@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Text;
-using System.Web;
-using System.Web.Mvc;
-using Roadkill.Core.Database;
+﻿using System.Text;
 using Roadkill.Core.Mvc.ViewModels;
 using Roadkill.Core.Plugins;
 using Roadkill.Core.Services;
@@ -27,7 +23,7 @@ namespace Roadkill.Plugins.TagCloud
 
         public override string Description
         {
-            get { return "Enables a tag cloud based on the added categories. Usage: {TagCloud}"; }
+            get { return "Inserts the Wiki tag cloud. Usage: {TagCloud}"; }
         }
 
         public override string Version

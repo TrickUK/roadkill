@@ -20,7 +20,7 @@ namespace Roadkill.Plugins
 
 	    public override string Description
 	    {
-			get { return "Enables videos to be played using a HTML5 or Flash based player."; }
+			get { return "Enables videos to be played using an HTML5 or Flash based player."; }
 	    }
 
 	    public override string Version
@@ -41,7 +41,11 @@ namespace Roadkill.Plugins
 
         public override string BeforeParse(string markupText)
         {
-            // \{\{(?'src'.*\.(?'ext'mp4|webm|ogg))(?:\|(?'alt'.*))*\}\}
+            // RegEx for replacement.
+			// Because we are injecting the HTML on BeforeParse (to prevent conflicting with images),
+			// the video and source tags need to be included in the HTML whitelist and the whitelist
+			// should be enabled.
+			// \{\{(?'src'.*\.(?'ext'mp4|webm|ogg))(?:\|(?'alt'.*))*\}\}
             
             string[] exts = Settings.GetValue("FileExtensions").Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
             StringBuilder sb = new StringBuilder();
@@ -60,7 +64,9 @@ namespace Roadkill.Plugins
 
         public override string AfterParse(string html)
         {
-            return HttpUtility.HtmlDecode(html);
+            // This will clean up any HtmlEncoded characters in our video and source tags
+			// that the sanitizer may have introduced.
+			return HttpUtility.HtmlDecode(html);
         }
 
         public override void OnInitializeSettings(Settings settings)
