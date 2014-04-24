@@ -30,3 +30,5 @@ _ReSharper*/
 src/Roadkill.Web/App_Data/Attachments/*.mp4
 src/Roadkill.Web/App_Data/Attachments/*.webm
 src/Roadkill.Web/App_Data/Attachments/*.jpg
+*Plugins*.dll
+*Plugins*.pdb
