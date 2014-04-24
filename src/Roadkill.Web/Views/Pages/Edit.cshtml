@@ -4,11 +4,10 @@
 }
 
 <script type="text/javascript">
-	$(document).ready(function ()
-	{
-		var pageTags = [ @(Html.Raw(Model.JavascriptArrayForAllTags())) ];
-		var editPage = new Roadkill.Web.EditPage(pageTags);
-	});
+    $(document).ready(function (){
+        var pageTags = [ @(Html.Raw(Model.JavascriptArrayForAllTags())) ];
+        var editPage = new Roadkill.Web.EditPage(pageTags);
+    });
 </script>
 <style>
 	.searchbar	{ display:none; }
@@ -79,4 +78,3 @@
 		</div>
 	</div>
 </div>
-

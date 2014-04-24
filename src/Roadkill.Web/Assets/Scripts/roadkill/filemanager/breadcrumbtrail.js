@@ -28,7 +28,7 @@ var Roadkill;
                 };
 
                 BreadCrumbTrail.addNewItem = function (data) {
-                    var htmlBuilder = new Roadkill.Web.FileManager.HtmlBuilder();
+                    var htmlBuilder = new FileManager.HtmlBuilder();
                     var count = $("ul.navigator li").length;
                     var breadCrumbHtml = htmlBuilder.getBreadCrumb(data, count);
 
@@ -36,7 +36,7 @@ var Roadkill;
                     $("li[data-urlpath='" + data.UrlPath + "'] a").on("click", function () {
                         var li = $(this).parent();
                         li.nextAll().remove();
-                        Roadkill.Web.FileManager.TableEvents.update(li.attr("data-urlpath"), false);
+                        FileManager.TableEvents.update(li.attr("data-urlpath"), false);
                     });
                 };
                 return BreadCrumbTrail;

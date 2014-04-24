@@ -22,12 +22,10 @@
 			@Html.Partial("Navigator", false)
 		</div>
 		<script type="text/javascript">
-			$(function ()
-			{
+			$(function (){
 				Roadkill.Web.FileManager.Setup.configure();
 				$("body").on("fileselected", "table#files",
-				function (e, data)
-				{
+				function (e, data){
 					window.top.Roadkill.Web.WysiwygEditor.addImage(data.file);
 				});
 			});

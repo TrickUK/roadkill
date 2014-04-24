@@ -472,9 +472,9 @@ namespace Roadkill.Core.Services
 				_listCache.RemoveAll();
 
 				int newVersion = _historyService.MaxVersion(model.Id) + 1;
-				PageContent pageContent = Repository.AddNewPageContentVersion(page, model.Content, AppendIpForDemoSite(currentUser), DateTime.UtcNow, newVersion); 
+				PageContent pageContent = Repository.AddNewPageContentVersion(page, model.Content, AppendIpForDemoSite(currentUser), DateTime.UtcNow, newVersion);
 
-				// Update all links to this page (if it has had its title renamed). Case changes don't need any updates.
+			    // Update all links to this page (if it has had its title renamed). Case changes don't need any updates.
 				if (model.PreviousTitle != null && model.PreviousTitle.ToLower() != model.Title.ToLower())
 				{
 					UpdateLinksToPage(model.PreviousTitle, model.Title);

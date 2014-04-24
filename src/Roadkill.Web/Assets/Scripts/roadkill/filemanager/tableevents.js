@@ -56,9 +56,9 @@ var Roadkill;
                             toastr.error(data.message);
                         } else {
                             if (addBreadCrumb)
-                                Roadkill.Web.FileManager.BreadCrumbTrail.addNewItem(data);
+                                FileManager.BreadCrumbTrail.addNewItem(data);
 
-                            var htmlBuilder = new Roadkill.Web.FileManager.HtmlBuilder();
+                            var htmlBuilder = new FileManager.HtmlBuilder();
                             var tableHtml = htmlBuilder.getFolderTable(data);
                             $("#folder-container").html(tableHtml.join(""));
 
@@ -67,7 +67,7 @@ var Roadkill;
                         }
                     };
 
-                    var ajaxRequest = new Roadkill.Web.FileManager.AjaxRequest();
+                    var ajaxRequest = new FileManager.AjaxRequest();
                     ajaxRequest.getFolderInfo(path, success);
                 };
                 return TableEvents;

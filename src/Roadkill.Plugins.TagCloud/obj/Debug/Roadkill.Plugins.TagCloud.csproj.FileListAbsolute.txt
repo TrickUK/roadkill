@@ -1,0 +1,6 @@
+C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Web\Plugins\TagCloud\Roadkill.Plugins.TagCloud.dll
+C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Web\Plugins\TagCloud\Roadkill.Plugins.TagCloud.pdb
+C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Plugins.TagCloud\obj\Debug\Roadkill.Plugins.TagCloud.csprojResolveAssemblyReference.cache
+C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Plugins.TagCloud\obj\Debug\Roadkill.Plugins.TagCloud.dll
+C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Plugins.TagCloud\obj\Debug\Roadkill.Plugins.TagCloud.pdb
+C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Web\Plugins\TagCloud\Roadkill.Plugins.TagCloud.dll.config

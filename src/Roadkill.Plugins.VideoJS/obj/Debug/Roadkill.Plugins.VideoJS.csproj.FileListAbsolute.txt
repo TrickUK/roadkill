@@ -5,3 +5,16 @@ C:\Users\Richard.BASETEK\Documents\Basetek Git\Roadkill2\src\Roadkill.Web\Plugin
 C:\Users\Richard.BASETEK\Documents\Basetek Git\Roadkill2\src\Roadkill.Plugins.VideoJS\obj\Debug\Roadkill.Plugins.VideoJS.csprojResolveAssemblyReference.cache
 C:\Users\Richard.BASETEK\Documents\Basetek Git\Roadkill2\src\Roadkill.Plugins.VideoJS\obj\Debug\Roadkill.Plugins.VideoJS.dll
 C:\Users\Richard.BASETEK\Documents\Basetek Git\Roadkill2\src\Roadkill.Plugins.VideoJS\obj\Debug\Roadkill.Plugins.VideoJS.pdb
+C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Web\Plugins\VideoJS\video-js.min.css
+C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Web\Plugins\VideoJS\video.js
+C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Web\Plugins\VideoJS\Roadkill.Plugins.VideoJS.dll.config
+C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Web\Plugins\VideoJS\Roadkill.Plugins.VideoJS.dll
+C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Web\Plugins\VideoJS\Roadkill.Plugins.VideoJS.pdb
+C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Plugins.VideoJS\obj\Debug\Roadkill.Plugins.VideoJS.csprojResolveAssemblyReference.cache
+C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Plugins.VideoJS\obj\Debug\Roadkill.Plugins.VideoJS.dll
+C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Plugins.VideoJS\obj\Debug\Roadkill.Plugins.VideoJS.pdb
+C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Web\Plugins\VideoJS\video.setup.js
+C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Web\Plugins\VideoJS\font\vjs.svg
+C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Web\Plugins\VideoJS\font\vjs.eot
+C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Web\Plugins\VideoJS\font\vjs.ttf
+C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Web\Plugins\VideoJS\font\vjs.woff

@@ -13,13 +13,13 @@ var Roadkill;
                     this.initializeImagePreview();
                     this.initializeFileUpload();
 
-                    var buttonEvents = new Roadkill.Web.FileManager.ButtonEvents();
+                    var buttonEvents = new FileManager.ButtonEvents();
                     buttonEvents.bind();
 
-                    var tableEvents = new Roadkill.Web.FileManager.TableEvents();
+                    var tableEvents = new FileManager.TableEvents();
                     tableEvents.bind();
 
-                    Roadkill.Web.FileManager.TableEvents.update("/");
+                    FileManager.TableEvents.update("/");
                 };
 
                 Setup.initializeImagePreview = function () {
@@ -34,7 +34,7 @@ var Roadkill;
                             return;
 
                         var imgUrl;
-                        imgUrl = ROADKILL_ATTACHMENTSPATH + Roadkill.Web.FileManager.TableEvents.getCurrentPath() + "/";
+                        imgUrl = ROADKILL_ATTACHMENTSPATH + FileManager.TableEvents.getCurrentPath() + "/";
                         imgUrl = imgUrl.replace("//", "/") + $("td.file", this).text();
 
                         $("body").append("<p id='image-preview'><img src='" + imgUrl + "' alt='Image Preview' /></p>");
@@ -67,14 +67,14 @@ var Roadkill;
                             } else {
                                 toastr.success(data.result.filename + " uploaded successfully.");
 
-                                Roadkill.Web.FileManager.TableEvents.update("", false);
+                                FileManager.TableEvents.update("", false);
                                 setTimeout(function () {
                                     $("#progress div.bar").css("width", "0%");
                                 }, 2000);
                             }
                         }
                     }).bind("fileuploaddrop", function (e, data) {
-                        Roadkill.Web.FileManager.TableEvents.update("", false);
+                        FileManager.TableEvents.update("", false);
                     });
                 };
                 return Setup;

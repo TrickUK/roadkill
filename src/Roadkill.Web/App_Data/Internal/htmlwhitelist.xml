@@ -1,7 +1,18 @@
 <?xml version="1.0"?>
 <HtmlWhiteList xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<ElementWhiteList>
-		<HtmlElement Name="strong">
+    <HtmlElement Name="video">
+      <AllowedAttributes>
+        <HtmlAttribute Name="class" />
+      </AllowedAttributes>
+    </HtmlElement>
+    <HtmlElement Name="source">
+      <AllowedAttributes>
+        <HtmlAttribute Name="src" />
+        <HtmlAttribute Name="type" />
+      </AllowedAttributes>
+    </HtmlElement>
+    <HtmlElement Name="strong">
 			<AllowedAttributes>
 				<HtmlAttribute Name="style" />
 			</AllowedAttributes>

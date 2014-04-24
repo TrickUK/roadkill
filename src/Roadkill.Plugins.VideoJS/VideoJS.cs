@@ -1,10 +1,14 @@
-﻿using Roadkill.Core.Plugins;
+﻿using System;
+using System.Text;
+using System.Web;
+using System.Text.RegularExpressions;
+using Roadkill.Core.Plugins;
 
 namespace Roadkill.Plugins
 {
-    public class VideoJS : Core.Plugins.TextPlugin
+    public class VideoJS : TextPlugin
     {
-	    public override string Id
+        public override string Id
 	    {
 			get { return "VideoJS"; }
 	    }
@@ -26,7 +30,8 @@ namespace Roadkill.Plugins
 
 		public VideoJS()
 		{
-			AddScript("video.js");
+            AddScript("video.js");
+            AddScript("video.setup.js");
 		}
 
 		public override string GetHeadContent()
@@ -34,14 +39,33 @@ namespace Roadkill.Plugins
 			return string.Format("{0}{1}", GetJavascriptHtml(), GetCssLink("video-js.min.css"));
 		}
 
-		public override string AfterParse(string html)
-		{
-			return html;
-		}
+        public override string BeforeParse(string markupText)
+        {
+            // \{\{(?'src'.*\.(?'ext'mp4|webm|ogg))(?:\|(?'alt'.*))*\}\}
+            
+            string[] exts = Settings.GetValue("FileExtensions").Split(",".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+            StringBuilder sb = new StringBuilder();
+            sb.Append(@"\{\{(?'src'.*\.(?'ext'");
+            foreach (string ext in exts) {
+                sb.AppendFormat("{0}|", ext);
+            }
+            sb.Remove(sb.Length - 1, 1);
+            sb.Append(@"))(?:\|(?'alt'.*))*\}\}");
 
-	    public override void OnInitializeSettings(Settings settings)
+            string RegexString = sb.ToString();
+            string ReplacementPattern = string.Format("<video class=\"video-js vjs-default-skin vjs-big-play-centered\"><source src=\"{0}${{src}}\" type=\"video/${{ext}}\" /></video>", ApplicationSettings.AttachmentsUrlPath);
+
+            return !Regex.IsMatch(markupText, RegexString) ? markupText : Regex.Replace(markupText, RegexString, ReplacementPattern);
+        }
+
+        public override string AfterParse(string html)
+        {
+            return HttpUtility.HtmlDecode(html);
+        }
+
+        public override void OnInitializeSettings(Settings settings)
 	    {
-			settings.SetValue("File Extentions", "mp4,ogg,webm");
+			settings.SetValue("FileExtensions", "mp4,ogg,webm");
 			base.OnInitializeSettings(settings);
 	    }
     }
