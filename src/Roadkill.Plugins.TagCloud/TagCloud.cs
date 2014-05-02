@@ -40,17 +40,13 @@ namespace Roadkill.Plugins.TagCloud
         {
             if (!html.Contains("{TagCloud}")) return html;
 
-            // strip the {TagCloud} creole from the output
-            html = _regex.Replace(html, "");
-            
-            // insert TagCloud html in place
-            StringBuilder sb = new StringBuilder();
+	        StringBuilder sb = new StringBuilder();
             sb.AppendLine("<ul id=\"tagcloud\" class=\"rounded10 clear\">");
             foreach (TagViewModel tag in _pageService.AllTags()) {
                 sb.AppendFormat("<li class=\"{0}\"><a href=\"/pages/tag/{1}\">{1}</a></li>", tag.ClassName, tag.Name);
             }
             sb.AppendLine("</ul>");
-            return string.Format("{0}{1}", html, sb);
+			return _regex.Replace(html, sb.ToString());
         }
     }
 }
