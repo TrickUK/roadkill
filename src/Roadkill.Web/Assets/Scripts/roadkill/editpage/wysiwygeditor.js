@@ -49,7 +49,7 @@ var Roadkill;
                     return false;
                 });
                 $(".wysiwyg-picture").click(function (e) {
-                    Web.Dialogs.openImageChooserModal("<iframe src='" + ROADKILL_FILESELECTURL + "' id='filechooser-iframe'></iframe>");
+                    Roadkill.Web.Dialogs.openImageChooserModal("<iframe src='" + ROADKILL_FILESELECTURL + "' id='filechooser-iframe'></iframe>");
                     return false;
                 });
                 $(".wysiwyg-link").click(function (e) {
@@ -57,7 +57,7 @@ var Roadkill;
                     return false;
                 });
                 $(".wysiwyg-help").click(function (e) {
-                    Web.Dialogs.openMarkupHelpModal("<iframe src='" + ROADKILL_WIKIMARKUPHELP + "' id='help-iframe'></iframe>");
+                    Roadkill.Web.Dialogs.openMarkupHelpModal("<iframe src='" + ROADKILL_WIKIMARKUPHELP + "' id='help-iframe'></iframe>");
                     return false;
                 });
             };
@@ -161,9 +161,9 @@ var Roadkill;
 
                     $("#Content").replaceSelection(prefix + suffix);
                     $("#Content").setSelection(range.start + prefix.length, range.start + prefix.length);
-                    Web.Dialogs.closeImageChooserModal();
+                    Roadkill.Web.Dialogs.closeImageChooserModal();
 
-                    Web.EditPage.updatePreviewPane();
+                    Roadkill.Web.EditPage.updatePreviewPane();
                 }
             };
             return WysiwygEditor;

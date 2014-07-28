@@ -4,3 +4,9 @@ C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Plugins.TagCloud\obj\Debu
 C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Plugins.TagCloud\obj\Debug\Roadkill.Plugins.TagCloud.dll
 C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Plugins.TagCloud\obj\Debug\Roadkill.Plugins.TagCloud.pdb
 C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Web\Plugins\TagCloud\Roadkill.Plugins.TagCloud.dll.config
+C:\Users\Richard.BASETEK\Documents\Basetek Git\Roadkill2\src\Roadkill.Web\Plugins\TagCloud\Roadkill.Plugins.TagCloud.dll.config
+C:\Users\Richard.BASETEK\Documents\Basetek Git\Roadkill2\src\Roadkill.Web\Plugins\TagCloud\Roadkill.Plugins.TagCloud.dll
+C:\Users\Richard.BASETEK\Documents\Basetek Git\Roadkill2\src\Roadkill.Web\Plugins\TagCloud\Roadkill.Plugins.TagCloud.pdb
+C:\Users\Richard.BASETEK\Documents\Basetek Git\Roadkill2\src\Roadkill.Plugins.TagCloud\obj\Debug\Roadkill.Plugins.TagCloud.csprojResolveAssemblyReference.cache
+C:\Users\Richard.BASETEK\Documents\Basetek Git\Roadkill2\src\Roadkill.Plugins.TagCloud\obj\Debug\Roadkill.Plugins.TagCloud.dll
+C:\Users\Richard.BASETEK\Documents\Basetek Git\Roadkill2\src\Roadkill.Plugins.TagCloud\obj\Debug\Roadkill.Plugins.TagCloud.pdb

@@ -12,7 +12,7 @@
                 this.initializeTagManager(tags);
 
                 // Bind all the button events
-                var editor = new Web.WysiwygEditor();
+                var editor = new Roadkill.Web.WysiwygEditor();
                 editor.bindEvents();
 
                 // Setup the help popovers for the buttons

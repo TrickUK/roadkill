@@ -50,7 +50,7 @@ var Roadkill;
             Setup.bindInfoButton = function () {
                 // Bind the info icon on each page
                 $("#pageinfo-button").click(function () {
-                    Web.Dialogs.openModal("#pageinformation");
+                    Roadkill.Web.Dialogs.openModal("#pageinformation");
                 });
             };
 

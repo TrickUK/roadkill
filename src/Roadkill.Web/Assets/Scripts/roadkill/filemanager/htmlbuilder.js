@@ -71,7 +71,7 @@ var Roadkill;
                     html += "<td class=\"filesize\">{3}</td>";
                     html += "</tr> ";
 
-                    return FileManager.Util.FormatString(html, fileModel.Name, fileModel.CreateDate, fileModel.Extension, fileModel.Size);
+                    return Roadkill.Web.FileManager.Util.FormatString(html, fileModel.Name, fileModel.CreateDate, fileModel.Extension, fileModel.Size);
                 };
                 return HtmlBuilder;
             })();

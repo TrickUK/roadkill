@@ -18,3 +18,9 @@ C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Web\Plugins\VideoJS\font\
 C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Web\Plugins\VideoJS\font\vjs.eot
 C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Web\Plugins\VideoJS\font\vjs.ttf
 C:\Users\Glen\Documents\Projects\Roadkill\src\Roadkill.Web\Plugins\VideoJS\font\vjs.woff
+C:\Users\Richard.BASETEK\Documents\Basetek Git\Roadkill2\src\Roadkill.Web\Plugins\VideoJS\font\vjs.svg
+C:\Users\Richard.BASETEK\Documents\Basetek Git\Roadkill2\src\Roadkill.Web\Plugins\VideoJS\video.setup.js
+C:\Users\Richard.BASETEK\Documents\Basetek Git\Roadkill2\src\Roadkill.Web\Plugins\VideoJS\font\vjs.eot
+C:\Users\Richard.BASETEK\Documents\Basetek Git\Roadkill2\src\Roadkill.Web\Plugins\VideoJS\font\vjs.ttf
+C:\Users\Richard.BASETEK\Documents\Basetek Git\Roadkill2\src\Roadkill.Web\Plugins\VideoJS\font\vjs.woff
+C:\Users\Richard.BASETEK\Documents\Basetek Git\Roadkill2\src\Roadkill.Web\Plugins\VideoJS\Roadkill.Plugins.VideoJS.dll.config
